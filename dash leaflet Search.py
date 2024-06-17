@@ -1,4 +1,4 @@
-
+ver
 import dash
 import dash_leaflet as dl
 import dash_html_components as html
@@ -93,6 +93,8 @@ def load_geojson(filepath):
 
 # Create the Dash app
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.DARKLY])
+server = app.server
+
 
 # Create the layout
 app.layout = html.Div([
