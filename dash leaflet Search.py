@@ -12,6 +12,8 @@ from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
 import json
 import dash_leaflet as dl
+import gunicorn
+
 
 #import EDM dataset
 data= pd.read_excel(r'C:\Users\jack.hickson\OneDrive - Aqua Consultants Limited\Documents\SevernTrent\STW EDM Return Map\src\data\EDM 2023 Storm Overflow Annual Return - all water and sewerage companies.xlsx', sheet_name='Severn Trent 2023', skiprows=1)
