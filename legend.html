@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UU EDM Return 2023 - Aqua WI&M</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $(function() {
+    $("#maplegend").draggable({
+      start: function(event, ui) {
+        $(this).css({
+          right: "auto",
+          top: "auto",
+          bottom: "auto"
+        });
+      }
+    });
+  });
+  </script>
+</head>
+<body>
+  <div id='maplegend' class='maplegend' 
+    style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+     border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+    <div class='legend-title'>% of Operation EDM </div>
+    <div class='legend-scale'>
+      <ul class='legend-labels'>
+        <li><span class='percent-legend' style='background:#de0033;'></span>0-25%</li>
+        <li><span class='percent-legend' style='background:#FFFF00;'></span>25-50%</li>
+        <li><span class='percent-legend' style='background:#00FF00;'></span>50-75%</li>
+        <li><span class='percent-legend' style='background:#016838;'></span>75-99%</li>
+        <li><span class='percent-legend' style='background:#F506D1;'></span>100%</li>
+      </ul>
+    </div>
+    <div style='clear: both;'></div>
+    <div class='legend-title'>Total Duration (hrs)</div>
+    <div class='legend-scale'>
+      <ul class='legend-labels'>
+        <li><span class='legend-bubble' style='width: 8px; height: 8px;'></span>1 hr</li>
+        <li><span class='legend-bubble' style='width: 24px; height: 24px;'></span>3000 hrs</li>
+        <li><span class='legend-bubble' style='width: 48px; height: 48px;'></span>6500 hrs</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
+<style type='text/css'>
+  .maplegend .legend-title {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 90%;
+  }
+  .maplegend .legend-scale ul {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    float: left;
+    list-style: none;
+    width: 100%;
+  }
+  .maplegend .legend-scale ul li {
+    font-size: 80%;
+    list-style: none;
+    margin-left: 0;
+    line-height: 18px;
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+  }
+  .maplegend ul.legend-labels li span {
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 0;
+    border: 1px solid #999;
+  }
+  .maplegend .legend-source {
+    font-size: 80%;
+    color: #777;
+    clear: both;
+  }
+  .maplegend a {
+    color: #777;
+  }
+  .legend-bubble {
+    background-color: #999;
+  }
+  .percent-legend {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+</style>
