@@ -19,10 +19,8 @@ import gunicorn
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.DARKLY])
 server = app.server
 
-
-# Create the layout
 app.layout = html.Div([
-    html.H3("Severn Trent Water EDM Storm Overflow Returns 2023", style={"textAlign": "center"}),
+    html.H3("Severn Trent Water EDM Storm Overflow Returns 2023", style={"textAlign": "center"}),])
     
 if __name__ == '__main__':
     app.run_server(debug=True)
